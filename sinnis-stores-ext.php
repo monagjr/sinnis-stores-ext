@@ -19,7 +19,7 @@ function sinnis_stores_process_phone($metadata, $object_id, $meta_key, $single){
         add_filter('get_post_metadata', 'sinnis_stores_process_phone', 100, 4);
 
         // process the meta value
-        $current_meta = '<a href="#" onclick="window.open(\'tel:' . str_replace(' ', '', $current_meta) . '\'); return true;">' .  $current_meta . '</a>';
+        $current_meta = '<a href="#" onclick="window.location=\'tel:' . str_replace(' ', '', $current_meta) . '\'; return true;">' .  $current_meta . '</a>';
         return $current_meta;
     }
 
